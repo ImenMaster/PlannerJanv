@@ -314,7 +314,16 @@ img.img-clinic {
     background: #3d83df !important;
     padding: 0.5rem 0.75rem !important;
 }
-
+.stats-item {
+    padding-top: 3rem;
+    height: 229px;
+}
+.slick-track {
+    margin: 0 100px !important;
+}
+.slick-slide {
+    width: 270px;
+}
 /*=============================================
 =                 Footer                       =
 =============================================*/
@@ -342,18 +351,13 @@ footer p {
     .stats-item {
         padding-top: 2rem;
     }
-}
-@media only screen and (min-width: 480px) {
-    .stats-item {
-        padding-top: 3rem;
-        height: 229px;
-    }
     .slick-track {
-        margin: 0 100px !important;
-    }
-    .slick-slide {
-        width: 270px;
-    }
+        margin: 0 35px !important;}
+}
+
+@media only screen and (min-width: 480px) {
+    .slick-track {
+        margin: 0 58px !important;}
 }
 
 @media screen and (min-width: 576px) {
