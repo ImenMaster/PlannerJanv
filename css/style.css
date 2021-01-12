@@ -91,7 +91,7 @@ select:focus {
     font: 300 1.5rem "Work Sans", sans-serif;
     letter-spacing: -0.3px;
     text-align: center;
-    max-width: 460px;
+
 }
 
 .description {
@@ -302,18 +302,23 @@ img.img-clinic {
 /*=============================================
 =                 Section offices              =
 =============================================*/
-
-.figure {
-    width: 32%;
-    margin-right: 0.5rem;
-    outline: none;
+.office-Title{
+  
+    max-width: 460px;
 }
+.figure {
+ 
+width: 30%;
+margin-right: 0.5rem;
+outline: none;}
+
 
 .btn-open {
     font: 700 0.5rem "Roboto", Arial, sans-serif !important;
     background: #3d83df !important;
     padding: 0.5rem 0.75rem !important;
 }
+
 .stats-item {
     padding-top: 3rem;
     height: 229px;
@@ -329,8 +334,9 @@ img.img-clinic {
 =============================================*/
 footer h1 {
     color: #333;
-    margin-bottom: 0.75em;
+    margin:  5rem auto 0.75em ;
     font: 300 1.5rem "Work Sans", sans-serif;
+    
 }
 
 footer .btn-open {
@@ -362,9 +368,8 @@ footer p {
 
 @media screen and (min-width: 576px) {
     /*Global css*/
-    section .container {
-        max-width: 1015px;
-    }
+    section .container ,
+    #office,.oo,
     .container-nav {
         max-width: 1015px;
     }
@@ -430,5 +435,15 @@ footer p {
 
     .list-stats {
         top: 3rem;
+    }
+}
+
+@media screen and (max-width: 1062px) {
+
+    .oo{
+
+      /*  position: relative;
+        left: 2rem;*/
+        max-width: 1015px;
     }
 }
