@@ -1,80 +1,47 @@
 /*=============================================
-=           Sommaire                          =
-- Font:
-		.5=10px
-		7rem=14px
-		.75rem=15px  
-		 .65rem;=13px
-		.96rem=19.2
-		 1.3rem =26px
-		1.7rem=34px
-		1.5rem=30px
-		2.5rem=50px
-		4.4rem=88px
-- Responsive
-    Type: 
-          all — for all media types
-          print — for printers
-          screen — for computer screens, tablets and, smart-phones
-          speech — for screen readers that “read” the page out loud
-
-    width:
-          Stard by min 320 and max 767 par default
-          Min 768 for SM and tablets
-          Min 992  for MD
-          Min 1200 for Lg
-
-         
-
-=============================================*/
-
-
-
-/*=============================================
 =            Font family                      =
 =============================================*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Work+Sans:wght@300;400&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Work+Sans:wght@300;400&display=swap");
 @font-face {
-	font-family: 'ElegantIcons';
-	src:url('../asserts/fonts/ElegantIcons/ElegantIcons.eot');
-	src:url('../asserts/fonts/ElegantIcons/ElegantIcons.eot?#iefix') format('embedded-opentype'),
-		url('../asserts/fonts/ElegantIcons/ElegantIcons.woff') format('woff'),
-		url('../asserts/fonts/ElegantIcons/ElegantIcons.ttf') format('truetype'),
-		url('../asserts/fonts/ElegantIcons/ElegantIcons.svg#ElegantIcons') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: "ElegantIcons";
+    src: url("../asserts/fonts/ElegantIcons/ElegantIcons.eot");
+    src: url("../asserts/fonts/ElegantIcons/ElegantIcons.eot?#iefix") format("embedded-opentype"), url("../asserts/fonts/ElegantIcons/ElegantIcons.woff") format("woff"),
+        url("../asserts/fonts/ElegantIcons/ElegantIcons.ttf") format("truetype"), url("../asserts/fonts/ElegantIcons/ElegantIcons.svg#ElegantIcons") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'ElegantIcons';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    font-family: "ElegantIcons";
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.icon_menu{
-    font-family: 'ElegantIcons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+.icon_menu,
+.arrow_carrot-down {
+    font-family: "ElegantIcons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
+
 .icon_menu:before {
     content: "\61";
     font-size: 1.8rem;
-    color: #00b39b
-
+    color: #00b39b;
 }
+
 /*=============================================
 =            Global Style                      =
 =============================================*/
@@ -93,18 +60,371 @@ body {
     padding: 0;
 }
 
-a:focus {
+a {
+    text-decoration: none;
+}
+
+a:focus,
+a:active {
     color: #00b39b !important;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #1e2125;
+    background-color: #f6f8f8 !important;
+}
+
+select:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.text-webkit-center {
+    text-align: -moz-center;
+    text-align: -webkit-center;
+}
+.title-section {
+    color: #00b39b;
+    font: 300 1.5rem "Work Sans", sans-serif;
+    letter-spacing: -0.3px;
+    text-align: center;
+    max-width: 460px;
+}
+
+.description {
+    max-width: 450px;
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 1.7142857143;
 }
 
 /*=============================================
 =                 Header                      =
 =============================================*/
+
+.header-nav {
+    box-shadow: none;
+    background: hsla(0, 0%, 100%, 0.98);
+    top: 0;
+    width: 100%;
+    z-index: 9999999999;
+}
+
+.logo-docplanner {
+    width: 215px;
+    height: 33px;
+}
+
+.main-menu {
+    font: 400 0.75rem/2em "Roboto", Arial, sans-serif !important;
+    color: #ababab;
+    width: 100%;
+}
+
+.dropdown-menu {
+    min-width: 220px !important;
+    background: #fff;
+    z-index: 1;
+    font: 400 0.75rem/2em "Roboto", Arial, sans-serif !important;
+    left: -58px !important;
+}
+
+.dropdown-item {
+    color: #ababab !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+/*=============================================
+=                 Section Lead                =
+=============================================*/
+
+#lead {
+    margin: 5rem auto 3.75rem;
+}
+
+.lead-title {
+    /* font-size: 2.125rem;*/
+    color: #00b39b;
+    font: 300 1.5rem "Work Sans", sans-serif;
+    margin: 0.7em 0;
+}
+
+.col-lead {
+    padding: 1rem;
+}
+
+.lead-p {
+    font: 400 0.8rem/1.75 "Roboto", Arial, sans-serif;
+    margin: 0.8em 0;
+}
+
+/*=============================================
+=                 Section Services            =
+=============================================*/
+
+.services-item .c11 {
+    color: white;
+    padding: 1.375em 1.25em 0;
+    border-radius: 10px;
+    height: 345px;
+}
+
+.services-item .c11 {
+    height: 345px;
+    background: #1b2734;
+}
+
+.services-item:nth-child(1) .c11 {
+    background: #00ccb1;
+}
+
+.services-item:nth-child(2) .c11 {
+    background: #3d83df;
+}
+
+.services-item h1 {
+    /*	font: 400 1rem 'Work Sans', sans-serif;*/
+    font: 400 1.3rem "Work Sans", sans-serif;
+    margin: 0.3em 0;
+    letter-spacing: -0.3px;
+}
+
+.services-item h2 {
+    font: 300 1.2rem/1.2 "Work Sans", sans-serif;
+    letter-spacing: -0.3px;
+}
+
+.select-style {
+    padding: 0 2em 0 0;
+    width: max-content;
+}
+
+.services-item select {
+    -webkit-appearance: none;
+    font: 400 0.96rem "Roboto", Arial, sans-serif !important;
+}
+
+.arrow_carrot-down:before {
+    content: "\33";
+    font-size: 1.1rem;
+}
+
+/*=============================================
+=                 Section Bands               =
+=============================================*/
+
+.bands-title {
+    color: #00b39b;
+    margin: 0.25em 0 0.35em;
+    font: 300 1.3rem "Work Sans", sans-serif;
+    letter-spacing: -0.3px;
+    padding-right: 1em;
+}
+
+.brands-list a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.brands-list img {
+    width: 120px;
+    transition: all 0.2s ease 0s;
+    filter: invert(98%) sepia(2%) saturate(0) hue-rotate(180deg) brightness(300%) contrast(0);
+    -webkit-filter: invert(98%) sepia(2%) saturate(0) hue-rotate(180deg) brightness(300%) contrast(0);
+    opacity: 0.5;
+    height: 53px;
+    margin-right: 3rem;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+}
+
+img.band-img {
+    width: 112px;
+}
+
+img.gipo {
+    width: 50px;
+}
+
+img.img-clinic {
+    width: 80px;
+}
+
+.brands-list img:hover {
+    filter: none;
+    opacity: 1;
+}
+/*=============================================
+=                 Section States               =
+=============================================*/
+
+#stats {
+    background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), url(../asserts/img/logo.png) bottom -248px left 3rem no-repeat;
+    height: 693px;
+}
+
+.list-stats {
+    top: auto;
+}
+
+.stats-item {
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
+    padding: 2rem 0.75rem 0.75rem;
+
+    font-size: 0.65rem;
+    height: 196px;
+}
+
+.last-item {
+    margin-top: -.3rem !important;
+}
+.stats-item img {
+    max-width: 28px;
+
+    height: auto;
+}
+.stats-item h3 {
+    font: 300 0.65rem "Work Sans", sans-serif;
+
+    color: #00b39b;
+    margin: 0.5em 0;
+}
+
+/*=============================================
+=                 Section offices              =
+=============================================*/
+
+.figure {
+    width: 32%;
+    margin-right: 0.5rem;
+    outline: none;
+}
+
+.btn-open {
+    font: 700 0.5rem "Roboto", Arial, sans-serif !important;
+    background: #3d83df !important;
+    padding: 0.5rem 0.75rem !important;
+}
+
+/*=============================================
+=                 Footer                       =
+=============================================*/
+footer h1 {
+    color: #333;
+    margin-bottom: 0.75em;
+    font: 300 1.5rem "Work Sans", sans-serif;
+}
+
+footer .btn-open {
+    font: 700 0.65rem "Roboto", Arial, sans-serif !important;
+}
+.footer-countries {
+    font-size: 12px;
+    color: #ababab;
+    margin-top: 5rem;
+}
+footer p {
+    margin-bottom: 0.4em;
+}
 /*=============================================
 =        Responsive                           =
 =============================================*/
+@media only screen and (min-width: 320px) and (max-width: 481px) {
+    .stats-item {
+        padding-top: 2rem;
+    }
+}
+@media only screen and (min-width: 480px) {
+    .stats-item {
+        padding-top: 3rem;
+        height: 229px;
+    }
+    .slick-track {
+        margin: 0 100px !important;
+    }
+    .slick-slide {
+        width: 270px;
+    }
+}
 
-/*Header*/
 @media screen and (min-width: 576px) {
+    /*Global css*/
+    section .container {
+        max-width: 1015px;
+    }
+    .container-nav {
+        max-width: 1015px;
+    }
+    .logo-docplanner {
+        width: 268px;
+    }
+    .main-menu {
+        width: max-content;
+    }
+    .dropdown .dropdown-menu {
+        display: none !important;
+        padding-top: 10px;
+        margin-left: -39px;
+        background: #fff;
+        box-shadow: 0 5px 10px 0 #d3cfc9;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block !important;
+    }
+    /*Section Lead*/
+    #lead {
+        margin: 4rem auto 1.875rem;
+    }
+    .lead-title {
+        font: 300 1.7rem "Work Sans", sans-serif;
+    }
+    .col-lead {
+        padding: 0.5rem 0.8rem 0.5rem 0.5rem;
+    }
+    /*Section Bands*/
+    .brands-list img {
+        margin-right: 0.8rem;
+    }
 
+    /*Section States*/
+    #stats {
+        background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), url(../asserts/img/logo.png) bottom -88px left 1rem no-repeat;
+        height: 645px;
+    }
+
+    .stats-item {
+        padding: 2rem 0.75rem 0.75rem;
+    }
+    .stats-item h3 {
+        font: 300 1.2rem "Work Sans", sans-serif;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 991px) {
+    /*Section States*/
+
+    #stats {
+        height: 760px;
+    }
+
+    .list-stats {
+        top: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    /*Section States*/
+
+    .list-stats {
+        top: 3rem;
+    }
 }

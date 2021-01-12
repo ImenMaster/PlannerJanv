@@ -1,0 +1,29 @@
+/*=============================================
+=           Sommaire                          =
+- Font:
+		.5=10px
+		7rem=14px
+		.75rem=15px  
+		 .65rem;=13px
+		.96rem=19.2
+		 1.3rem =26px
+		1.7rem=34px
+		1.5rem=30px
+		2.5rem=50px
+		4.4rem=88px
+- Responsive
+    Type: 
+          all — for all media types
+          print — for printers
+          screen — for computer screens, tablets and, smart-phones
+          speech — for screen readers that “read” the page out loud
+
+    width:
+          Stard by min 320 and max 767 par default
+          Min 768 for SM and tablets
+          Min 992  for MD
+          Min 1200 for Lg
+
+         
+
+=============================================*/
