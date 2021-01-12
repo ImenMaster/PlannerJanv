@@ -319,7 +319,7 @@ img.img-clinic {
 }
 .stats-item {
 	padding-top: 2rem;
-	height: 259px;
+
 }
 }
 @media only screen and (min-width : 480px) {
@@ -383,7 +383,7 @@ img.img-clinic {
 }
 
 .stats-item{
-	height: 250px;
+
 	padding:2rem .75rem .75rem;
 
 
