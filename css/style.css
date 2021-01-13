@@ -229,6 +229,11 @@ select:focus {
 .select-style {
     padding: 0 2em 0 0;
     width: max-content;
+ 
+    bottom: 31px;
+}
+ .select-style:last-child
+ { bottom: 77px;
 }
 
 .services-item select {
