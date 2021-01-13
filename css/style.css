@@ -24,7 +24,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon_menu,
+
 .arrow_carrot-down {
     font-family: "ElegantIcons";
     speak: none;
@@ -36,10 +36,16 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.icon_menu:before {
-    content: "\61";
-    font-size: 1.8rem;
-    color: #00b39b;
+.icon_menu,.icon_menu:after,.icon_menu:before {
+    width: 24px;
+    height: 2px;
+    background-color: #00b39b;
+    border-radius: 2px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+
 }
 
 /*=============================================
@@ -116,6 +122,7 @@ select:focus {
 .logo-docplanner {
     width: 215px;
     height: 33px;
+
 }
 
 .main-menu {
@@ -139,7 +146,26 @@ select:focus {
 .navbar-toggler:focus {
     box-shadow: none !important;
 }
-
+/**/
+.icon_menu:after,.icon_menu:before {
+    content: "";
+    display: block;
+    
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(.68,-.55,.265,1.55);
+    }
+    .icon_menu:before {
+        top: -7px;
+     
+    }
+    .icon_menu:after{
+        bottom: -10px;
+     
+    }
+    
+ 
+    
+    
 /*=============================================
 =                 Section Lead                =
 =============================================*/
@@ -354,17 +380,25 @@ footer p {
 =        Responsive                           =
 =============================================*/
 @media only screen and (min-width: 320px) and (max-width: 481px) {
+
+    /*Section State*/
     .stats-item {
         padding-top: 2rem;
     }
     .slick-track {
         margin: 0 35px !important;}
+
+
+
 }
 
 @media only screen and (min-width: 480px) {
     .slick-track {
         margin: 0 58px !important;}
 }
+
+
+
 
 @media screen and (min-width: 576px) {
     /*Global css*/
@@ -389,6 +423,9 @@ footer p {
     .dropdown:hover .dropdown-menu {
         display: block !important;
     }
+
+
+   
     /*Section Lead*/
     #lead {
         margin: 4rem auto 1.875rem;
@@ -417,7 +454,114 @@ footer p {
         font: 300 1.2rem "Work Sans", sans-serif;
     }
 }
+@media screen and (max-width: 577px) {
+    /*Header*/
+   
+    .is-menu .logo-docplanner{
+        filter: brightness(200%) saturate(0) contrast(1000%) grayscale(100%);
+        -webkit-filter: brightness(200%) saturate(0) contrast(1000%) grayscale(100%);
+    
+    }
+       .is-menu .icon_menu,.is-menu .icon_menu:after,.is-menu .icon_menu:before {
+            background:white
+        }
+    
+     .is-menu .icon_menu {
+            transform: translate3d(0, 7px, 0) rotate(135deg);
+            transition-delay: 0.1s;
+            -webkit-transform: translate3d(0, 7px, 0) rotate(135deg);
+            -moz-transform: translate3d(0, 7px, 0) rotate(135deg);
+            -ms-transform: translate3d(0, 7px, 0) rotate(135deg);
+            -o-transform: translate3d(0, 7px, 0) rotate(135deg);
+    }
+        .is-menu .icon_menu:before {
+            transition-delay: 0s;
+            opacity: 0;
+        }
+        .is-menu  .icon_menu:after {
+            transform: translate3d(0, -14px, 0) rotate(-270deg);
+            transition-delay: 0.1s;
+        }
+    
+        .collapsing{
+            transition: transform .2s ease 0s !important;
+            transform: translateY(-100%) !important;
+            overflow-y: auto !important;
+            -webkit-transition: transform .2s ease 0s !important;
+            -moz-transition: transform .2s ease 0s !important;
+            -ms-transition: transform .2s ease 0s !important;
+            -o-transition: transform .2s ease 0s !important;
+            -webkit-transform: translateY(-100%) !important;
+            -moz-transform: translateY(-100%) !important;
+            -ms-transform: translateY(-100%) !important;
+            -o-transform: translateY(-100%) !important;
+    }
+     .is-menu .collapsing {
+     transform: translate(0) !important;
+     -webkit-transform: translate(0) !important;
+     -moz-transform: translate(0) !important;
+     -ms-transform: translate(0) !important;
+     -o-transform: translate(0) !important;
+    }
+    
+    
+    
+    
+    .dropdown-menu {
+        color: #ffffff !important;
+        background-color: transparent !important;
+    
+    }
+    
+    .nav-item
+    {
+        border-bottom: 1px solid hsla(0,0%,100%,.2);
+    
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-light .navbar-nav .nav-link ,
+    .dropdown-item{
+        color: hsla(0,0%,100%,.8) !important;
+        padding-bottom: 22px;
+        transition: opacity .2s ease 0s !important;
+        -webkit-transition: opacity .2s ease 0s !important;
+        -moz-transition: opacity .2s ease 0s !important;
+        -ms-transition: opacity .2s ease 0s !important;
+        -o-transition: opacity .2s ease 0s !important;
+        opacity: 0;
+    
+    
+    }
+    
+    
+    
+    .is-menu .navbar-light .navbar-nav .nav-link ,
+    .is-menu .dropdown-item{
+        opacity: 1;
+     
+       
+    }
+    
+    .navbar-brand   ,
+    .navbar-toggler{
+        z-index: 99999;
+    }
+    
+    .navbar-collapse{
+        position:absolute;
+        top: 0;
+        left: 0;
+        background: #00b39b;
+        padding: 97px 0 0;
+        height: 120vh;
+    
+    }
+    
 
+/*****************/
+
+}
 @media screen and (min-width: 577px) and (max-width: 991px) {
     /*Section States*/
 
@@ -442,8 +586,6 @@ footer p {
 
     .oo{
 
-      /*  position: relative;
-        left: 2rem;*/
         max-width: 1015px;
     }
 }
