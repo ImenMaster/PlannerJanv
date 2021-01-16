@@ -69,6 +69,10 @@
 .is-menu .icon_menu:after {
     transform: translate3d(0, -14px, 0) rotate(-270deg);
     transition-delay: 0.1s;
+    -webkit-transform: translate3d(0, -14px, 0) rotate(-270deg);
+    -moz-transform: translate3d(0, -14px, 0) rotate(-270deg);
+    -ms-transform: translate3d(0, -14px, 0) rotate(-270deg);
+    -o-transform: translate3d(0, -14px, 0) rotate(-270deg);
 }
 
 .collapsing {
@@ -96,7 +100,9 @@
 =            Global Style                      =
 =============================================*/
 html {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400;
 }
 body {
     font-family: "Roboto", Arial, sans-serif !important;
@@ -129,10 +135,6 @@ select:focus {
     box-shadow: none;
 }
 
-.text-webkit-center {
-    text-align: -moz-center;
-    text-align: -webkit-center;
-}
 .title-section {
     color: #00b39b;
     font: 300 2.125rem "Work Sans", sans-serif;
@@ -204,10 +206,20 @@ select:focus {
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .icon_menu:before {
-    top: -7px;
+    top: 7px;
+    transition: opacity 0.15s ease 0.4s;
+    -webkit-transition: opacity 0.15s ease 0.4s;
+    -moz-transition: opacity 0.15s ease 0.4s;
+    -ms-transition: opacity 0.15s ease 0.4s;
+    -o-transition: opacity 0.15s ease 0.4s;
 }
 .icon_menu:after {
-    bottom: -10px;
+    bottom: -14px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .navbar-collapse {
@@ -372,20 +384,31 @@ img.img-clinic {
     height: 693px;
 }
 
+#stats .title-section,
+#stats .description {
+    text-align: center;
+}
+#stats .description {
+    margin: 1.6em auto;
+}
 .list-stats {
     top: auto;
+    width: 100%;
 }
 
 .stats-item {
     border-radius: 5px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
-    padding: 2rem 0.75rem 0.75rem;
-    font-size: 1em;
-    height: 196px;
+    padding: 3rem 0.75rem 0.75rem;
+
+    height: 245px;
+    font-size: 0.8125em;
+
+    text-align: center;
 }
 
 .last-item {
-    margin-top: -0.3rem !important;
+    margin-top: -1rem !important;
 }
 .stats-item img {
     max-width: 28px;
@@ -403,15 +426,18 @@ img.img-clinic {
 =                 Section offices              =
 =============================================*/
 .office-Title {
-    max-width: 460px;
+    max-width: 498px;
     font-size: 0.875em;
 }
 .office-Title h1 {
     font-size: 2.1428571429em;
+    line-height: 1.3;
 }
 
 #office .description {
     font: 400 1em/1.7142857143 "Roboto", Arial, sans-serif;
+    max-width: 498px;
+    margin: 1.6em 0;
 }
 .figure {
     width: 30%;
@@ -433,10 +459,6 @@ img.img-clinic {
     padding: 1em 1.5em !important;
 }
 
-.stats-item {
-    padding-top: 3rem;
-    height: 229px;
-}
 .slick-track {
     margin: 0 100px !important;
 }
@@ -491,7 +513,7 @@ footer p {
     section .container,
     .list-office,
     .container-nav {
-        max-width: 1015px;
+        max-width: 90%;
     }
 
     /*Header*/
@@ -550,6 +572,10 @@ footer p {
         background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), url(../asserts/img/logo.png) bottom -88px left 1rem no-repeat;
         height: 645px;
     }
+    #stats .title-section,
+    #stats .description {
+        text-align: left;
+    }
 
     .stats-item {
         padding: 2rem 0.75rem 0.75rem;
@@ -565,7 +591,10 @@ footer p {
     #stats {
         height: 760px;
     }
-
+    #stats .title-section,
+    #stats .description {
+        text-align: center;
+    }
     .list-stats {
         top: auto;
     }
@@ -576,6 +605,8 @@ footer p {
 
     .list-stats {
         top: 3rem;
+        right: 4rem;
+        width: 80%;
     }
 }
 
