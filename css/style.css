@@ -503,13 +503,11 @@ footer p {
 =============================================*/
 
 @media only screen and (min-width: 320px) and (max-width: 481px) {
-
-      /* Section Lead */
-      #lead h1 {
+    /* Section Lead */
+    #lead h1 {
         font-size: 1.875em;
-    margin: .7em 0;
+        margin: 0.7em 0;
     }
-    
 
     /*Section State*/
 
@@ -520,14 +518,9 @@ footer p {
     .slick-track {
         margin: 0 35px !important;
     }
-
 }
 
 @media only screen and (min-width: 480px) {
-
-    
-  
-    
     .slick-track {
         margin: 0 58px !important;
     }
@@ -538,8 +531,6 @@ footer p {
     .brands-list li {
         width: 25%;
     }
-
-
 }
 
 @media screen and (min-width: 576px) {
@@ -597,13 +588,12 @@ footer p {
     }
 
     /*Section Services*/
-    .services-item .c11{
+    .services-item .c11 {
         height: 406px;
     }
 
-    .select-style{
+    .select-style {
         bottom: 75px;
-     
     }
 
     .select-style:last-child {
@@ -633,21 +623,20 @@ footer p {
     }
 }
 
-
-@media (min-width: 768px){
-    .services-item .c11{
+@media (min-width: 768px) {
+    .services-item .c11 {
         height: 331px;
     }
-    .select-style{
+    .select-style {
         width: fit-content;
         bottom: 59px;
-    } 
+    }
 
     .select-style:last-child {
         bottom: 19px;
     }
 }
- 
+
 @media screen and (min-width: 577px) and (max-width: 991px) {
     /*Section States*/
 
@@ -661,8 +650,6 @@ footer p {
     .list-stats {
         top: auto;
     }
-
-
 }
 
 @media screen and (min-width: 992px) {
@@ -675,18 +662,15 @@ footer p {
         right: 9rem;
         width: 80%;
     }
-    
+
     /* Section Services */
     .services-item .c11 {
         height: 305px;
     }
-    
-       
 }
 
 @media screen and (max-width: 1062px) {
     .list-office {
         max-width: 1015px;
     }
-   
 }
