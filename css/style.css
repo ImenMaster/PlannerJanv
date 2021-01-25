@@ -280,7 +280,7 @@ select:focus {
     color: white;
     padding: 1.375em 1.25em 0;
     border-radius: 10px;
-    height: 300px;
+    height: 338px;
     background: #1b2734;
 }
 
@@ -503,6 +503,14 @@ footer p {
 =============================================*/
 
 @media only screen and (min-width: 320px) and (max-width: 481px) {
+
+      /* Section Lead */
+      #lead h1 {
+        font-size: 1.875em;
+    margin: .7em 0;
+    }
+    
+
     /*Section State*/
 
     .stats-item {
@@ -512,9 +520,14 @@ footer p {
     .slick-track {
         margin: 0 35px !important;
     }
+
 }
 
 @media only screen and (min-width: 480px) {
+
+    
+  
+    
     .slick-track {
         margin: 0 58px !important;
     }
@@ -525,6 +538,8 @@ footer p {
     .brands-list li {
         width: 25%;
     }
+
+
 }
 
 @media screen and (min-width: 576px) {
