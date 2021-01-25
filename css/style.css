@@ -280,7 +280,7 @@ select:focus {
     color: white;
     padding: 1.375em 1.25em 0;
     border-radius: 10px;
-    height: 345px;
+    height: 300px;
     background: #1b2734;
 }
 
@@ -306,8 +306,8 @@ select:focus {
 
 .select-style {
     padding: 0 2em 0 0;
-    width: max-content;
-
+    width: fit-content;
+    overflow-x: hidden;
     bottom: 87px;
 }
 .select-style:last-child {
@@ -580,6 +580,20 @@ footer p {
     #lead h1 {
         margin: 0.7em 0;
     }
+
+    /*Section Services*/
+    .services-item .c11{
+        height: 406px;
+    }
+
+    .select-style{
+        bottom: 75px;
+     
+    }
+
+    .select-style:last-child {
+        bottom: 33px;
+    }
     /*Section Bands*/
     a.link-gipo {
         padding-left: 1rem;
@@ -604,6 +618,21 @@ footer p {
     }
 }
 
+
+@media (min-width: 768px){
+    .services-item .c11{
+        height: 331px;
+    }
+    .select-style{
+        width: fit-content;
+        bottom: 59px;
+    } 
+
+    .select-style:last-child {
+        bottom: 19px;
+    }
+}
+ 
 @media screen and (min-width: 577px) and (max-width: 991px) {
     /*Section States*/
 
@@ -617,6 +646,8 @@ footer p {
     .list-stats {
         top: auto;
     }
+
+
 }
 
 @media screen and (min-width: 992px) {
@@ -629,10 +660,18 @@ footer p {
         right: 9rem;
         width: 80%;
     }
+    
+    /* Section Services */
+    .services-item .c11 {
+        height: 305px;
+    }
+    
+       
 }
 
 @media screen and (max-width: 1062px) {
     .list-office {
         max-width: 1015px;
     }
+   
 }
