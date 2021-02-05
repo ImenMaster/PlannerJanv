@@ -389,7 +389,7 @@ a.link-gipo {
 
 #stats {
     background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), 
-    url(../asserts/img/logo.png) bottom -42% left 27% no-repeat;
+    url(../asserts/img/logo.png) bottom -42% left 5% no-repeat;
     overflow: hidden;
     padding-top: 5rem;
     height: 801px;
