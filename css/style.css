@@ -598,6 +598,11 @@ footer p {
     #stats .title-section,
     #stats .description {
         text-align: left;
+            
+    }
+
+    #stats .description{
+        margin: 1.6em 0;
     }
 
     .stats-item {
@@ -631,7 +636,7 @@ footer p {
     #stats .description {
         text-align: center;
     }
-
+   
     .list-stats {
         text-align: center;
         margin: 0 auto;
