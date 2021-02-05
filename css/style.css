@@ -294,7 +294,6 @@ select:focus {
 
 .services-item h1 {
     font: 400 1.625em "Work Sans", sans-serif;
-
     margin: 0.3em 0;
     letter-spacing: -0.3px;
 }
@@ -389,9 +388,10 @@ a.link-gipo {
 =============================================*/
 
 #stats {
-    background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), url(../asserts/img/logo.png) bottom -248px left 3rem no-repeat;
-    height: 100%;
-    padding-bottom: 34rem;
+    background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), url(../asserts/img/logo.png) bottom -7rem left 3rem no-repeat;
+    overflow: hidden;
+    padding-top: 5rem;
+    height: 801px;
 }
 
 #stats .title-section,
@@ -400,34 +400,24 @@ a.link-gipo {
 }
 #stats .description {
     margin: 1.6em auto;
-}
-.list-stats {
-    top: auto;
-    width: 100%;
+    max-width: 415px;
 }
 
 .stats-item {
     border-radius: 5px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05);
     padding: 3rem 0.75rem 0.75rem;
-
     height: 245px;
     font-size: 0.8125em;
-
     text-align: center;
 }
 
-.last-item {
-    margin-top: -1rem !important;
-}
 .stats-item img {
     max-width: 28px;
-
     height: auto;
 }
 .stats-item h3 {
     font: 300 1.125em "Work Sans", sans-serif;
-
     color: #00b39b;
     margin: 0.5em 0;
 }
@@ -503,6 +493,7 @@ footer p {
 =============================================*/
 
 @media only screen and (min-width: 320px) and (max-width: 481px) {
+    
     /* Section Lead */
     #lead h1 {
         font-size: 1.875em;
@@ -510,7 +501,6 @@ footer p {
     }
 
     /*Section State*/
-
     .stats-item {
         padding-top: 2rem;
         height: 237px;
@@ -605,11 +595,6 @@ footer p {
     }
 
     /*Section States*/
-    #stats {
-        padding-bottom: 34rem;
-        background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), url(../asserts/img/logo.png) bottom -88px left 1rem no-repeat;
-    }
-
     #stats .title-section,
     #stats .description {
         text-align: left;
@@ -624,6 +609,8 @@ footer p {
 }
 
 @media (min-width: 768px) {
+
+    /*Section Services*/
     .services-item .c11 {
         height: 331px;
     }
@@ -638,29 +625,23 @@ footer p {
 }
 
 @media screen and (min-width: 577px) and (max-width: 991px) {
-    /*Section States*/
 
-    #stats {
-        padding-bottom: 34rem;
-    }
+    /*Section States*/
     #stats .title-section,
     #stats .description {
         text-align: center;
     }
+
     .list-stats {
-        top: auto;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
 @media screen and (min-width: 992px) {
     /*Section States*/
     #stats {
-        padding-bottom: 24rem;
-    }
-    .list-stats {
-        top: 3rem;
-        right: 9rem;
-        width: 80%;
+        height: 650px;
     }
 
     /* Section Services */
