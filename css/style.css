@@ -665,3 +665,11 @@ footer p {
         max-width: 1015px;
     }
 }
+
+
+@media screen and (min-width: 1500px) {
+#stats {
+    background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), 
+    url(../asserts/img/logo.png) bottom -42% left 23% no-repeat;
+
+}}
