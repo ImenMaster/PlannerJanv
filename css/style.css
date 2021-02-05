@@ -388,7 +388,8 @@ a.link-gipo {
 =============================================*/
 
 #stats {
-    background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), url(../asserts/img/logo.png) bottom -7rem left 3rem no-repeat;
+    background: linear-gradient(-45deg, rgba(0, 204, 177, 0.17) 5%, rgba(61, 199, 223, 0.18)), 
+    url(../asserts/img/logo.png) bottom -42% left 27% no-repeat;
     overflow: hidden;
     padding-top: 5rem;
     height: 801px;
@@ -399,7 +400,7 @@ a.link-gipo {
     text-align: center;
 }
 #stats .description {
-    margin: 1.6em auto;
+    margin: 1.6em 0;
     max-width: 415px;
 }
 
@@ -602,7 +603,7 @@ footer p {
     }
 
     #stats .description{
-        margin: 1.6em 0;
+        margin: 1.6em auto;
     }
 
     .stats-item {
@@ -613,7 +614,7 @@ footer p {
     }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
     /*Section Services*/
     .services-item .c11 {
@@ -648,7 +649,11 @@ footer p {
     #stats {
         height: 650px;
     }
+  
 
+    #stats .description{
+        margin: 1.6em 0;
+    }
     /* Section Services */
     .services-item .c11 {
         height: 305px;
